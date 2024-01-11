@@ -1,0 +1,10 @@
+.counter,
+.form {
+  border: none;
+  margin-left: 10px;
+  margin-top: 20px;
+  padding: 15px;
+  width: 110px;
+  background-color: black;
+  color: white;
+}
