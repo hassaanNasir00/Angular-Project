@@ -1,0 +1,9 @@
+<div class="counter">
+  <h2>{{ counterValue }}</h2>
+  <div class="btns">
+    <button (click)="addOne()">+</button>
+    <button (click)="minusOne()" [disabled]="counterValue === 0">-</button>
+  </div>
+
+  <h3>{{ finalMessage }}</h3>
+</div>
