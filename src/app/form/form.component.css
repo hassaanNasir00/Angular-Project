@@ -1,0 +1,33 @@
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px gray;
+  margin: auto;
+  width: 30%;
+  height: 300px;
+}
+input {
+  width: 73%;
+
+  padding: 10px;
+}
+
+.form-details {
+  border: solid 1px gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 15px;
+  width: 30%;
+  height: 300px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.form-details label p {
+  text-decoration: underline;
+}

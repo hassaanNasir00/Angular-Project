@@ -1,0 +1,56 @@
+<form [formGroup]="formData" class="inputs">
+  <input
+    #firstname
+    type="text"
+    formControlName="name"
+    placeholder="Enter Name"
+  />
+
+  <input
+    type="password"
+    formControlName="password"
+    placeholder="Enter password"
+  />
+  <input
+    #email
+    type="email"
+    formControlName="email"
+    placeholder="Enter email"
+  />
+  <div class="d-flex gap-2 align-items-center justify-center">
+    <mat-label>Gender</mat-label>
+    <mat-radio-group aria-label="Select an option" formControlName="gender">
+      <mat-radio-button value="male">Male</mat-radio-button>
+      <mat-radio-button value="female">Female</mat-radio-button>
+      <mat-radio-button value="other">Other</mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <input type="number" formControlName="number" placeholder="Enter number" />
+
+  <button (click)="onSubmit($event)" [disabled]="formData.invalid">
+    Submit
+  </button>
+</form>
+
+<div class="form-details">
+  <label
+    >User Name:
+    <p>{{ formDetails.name }}</p></label
+  >
+  <label
+    >Email:
+    <p>{{ formDetails.email }}</p></label
+  >
+  <label
+    >Number:
+    <p>{{ formDetails.number }}</p></label
+  >
+  <label
+    >Password:
+    <p>{{ formDetails.password }}</p></label
+  >
+  <label
+    >Gender:
+    <p>{{ formDetails.gender }}</p></label
+  >
+</div>
