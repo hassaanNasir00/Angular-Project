@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   logo: string = 'EcommerceApp';
   navBarList: string[] = ['About', 'Home', 'Contact', 'Demo', 'Pages'];
+
   constructor() {}
 }
