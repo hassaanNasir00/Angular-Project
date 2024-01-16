@@ -18,6 +18,8 @@ import { FormsComponent } from './forms/forms.component';
 import { LoginComponent } from './forms/login/login.component';
 import { RegisterComponent } from './forms/register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AddEmpComponent } from './task4/add-emp/add-emp.component';
+import { ShowEmpComponent } from './task4/show-emp/show-emp.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     LoginComponent,
     RegisterComponent,
     DashboardComponent,
+    AddEmpComponent,
+    ShowEmpComponent,
   ],
   imports: [
     BrowserModule,

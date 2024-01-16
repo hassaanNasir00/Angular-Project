@@ -1,0 +1,23 @@
+<div>
+  <h2>Employee Details</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Father's Name</th>
+        <th>Email</th>
+        <th>Number</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of empList">
+        <td>{{ emp.name }}</td>
+        <td>{{ emp.fname }}</td>
+        <td>{{ emp.email }}</td>
+        <td>{{ emp.number }}</td>
+        <button (click)="removeEmp(emp)">Remove</button>
+      </tr>
+    </tbody>
+  </table>
+</div>
