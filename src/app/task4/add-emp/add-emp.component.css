@@ -1,0 +1,46 @@
+form {
+  max-width: 600px;
+  width: 420px;
+  padding: 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 45px;
+  margin-top: 26px;
+  margin-bottom: 50px;
+}
+h2 {
+  color: #4caf50;
+  font-weight: 700;
+}
+
+/* Style the input fields */
+input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.validation-msg {
+  color: red;
+  font-weight: bold;
+  margin: 0;
+  padding: 1px;
+}
+
+/* Style the button */
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Add some hover effect to the button */
+button:hover {
+  background-color: #45a049;
+}

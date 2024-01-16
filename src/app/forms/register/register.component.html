@@ -1,0 +1,27 @@
+<div class="form">
+  <div class="main" *ngIf="showRegister; else loginComponent">
+    <h2>Register</h2>
+    <div class="register-form">
+      <input type="text" placeholder="Enter username" #name />
+      <input type="email" placeholder="Enter email" #email />
+      <input type="password" placeholder="Enter password" #password />
+    </div>
+
+    <button (click)="onRegister(name.value, email.value, password.value)">
+      Register
+    </button>
+  </div>
+  <ng-template #loginComponent>
+    <div class="main">
+      <h2>Login</h2>
+      <div class="register-form">
+        <input type="email" placeholder="Enter email" #emailValue />
+        <input type="password" placeholder="Enter password" #passwordValue />
+      </div>
+
+      <button (click)="onLogin(emailValue.value, passwordValue.value)">
+        Login
+      </button>
+    </div>
+  </ng-template>
+</div>
