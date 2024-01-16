@@ -1,0 +1,45 @@
+<form [formGroup]="empData">
+  <h2>Add Employee</h2>
+  <div>
+    <input type="text" placeholder="Enter Name" formControlName="name" />
+    <small *ngIf="name.invalid && (name.dirty || name.touched)">
+      <div *ngIf="name.errors?.['required']">
+        <p class="validation-msg">Username required</p>
+      </div>
+    </small>
+  </div>
+  <div>
+    <input type="text" placeholder="Father Name" formControlName="fname" />
+    <small *ngIf="fname.invalid && (fname.dirty || fname.touched)">
+      <div *ngIf="fname.errors?.['required']">
+        <p class="validation-msg">Father name required</p>
+      </div>
+    </small>
+  </div>
+  <div>
+    <input type="number" placeholder="Enter Number" formControlName="number" />
+    <small *ngIf="number.invalid && (number.dirty || number.touched)">
+      <div *ngIf="number.errors?.['required']">
+        <p class="validation-msg">Number required</p>
+      </div>
+    </small>
+  </div>
+  <div>
+    <input type="email" placeholder="Enter Email" formControlName="email" />
+    <small *ngIf="email.invalid && (email.dirty || email.touched)">
+      <div *ngIf="email.errors?.['required']">
+        <p class="validation-msg">Email required</p>
+      </div>
+      <div *ngIf="email.errors?.['email']">
+        <p class="validation-msg">Email should be valid</p>
+      </div>
+    </small>
+  </div>
+  <button (click)="onSubmit()" [disabled]="empData.invalid">
+    Add Employee
+  </button>
+</form>
+<app-show-emp
+  [empList]="empList"
+  (removeEmpEvent)="removeEmp($event)"
+></app-show-emp>
