@@ -14,6 +14,10 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { FormsComponent } from './forms/forms.component';
+import { LoginComponent } from './forms/login/login.component';
+import { RegisterComponent } from './forms/register/register.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +26,10 @@ import { MatInputModule } from '@angular/material/input';
     FooterComponent,
     CounterAppComponent,
     FormComponent,
+    FormsComponent,
+    LoginComponent,
+    RegisterComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
