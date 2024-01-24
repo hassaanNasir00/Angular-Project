@@ -1,0 +1,9 @@
+<div class="tabs">
+  <div
+    *ngFor="let tab of tabs; let i = index"
+    [ngClass]="{ 'active-tab': currentIndex === i }"
+    (click)="changeTab(i)"
+  >
+    <div class="non-active">{{ tab }}</div>
+  </div>
+</div>

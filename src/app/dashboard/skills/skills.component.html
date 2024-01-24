@@ -1,0 +1,32 @@
+<form [formGroup]="skillForm">
+  <h2>Skills</h2>
+  <label for="firstName">Sports:</label>
+  <input type="text" formControlName="sports" />
+  <small *ngIf="sports.invalid && (sports.touched || sports.dirty)">
+    <div *ngIf="sports.errors?.['required']">Sports Required</div>
+  </small>
+
+  <label for="lastName">Skills</label>
+  <input type="text" formControlName="skill" />
+
+  <button (click)="addSkill()">Add Skill</button>
+  <div class="skills" formArrayName="newSkill">
+    <div *ngFor="let skill of newSkill.controls; let i = index">
+      <p>{{ skill.value }} <span (click)="removeSkill(i)">x</span></p>
+    </div>
+  </div>
+
+  <label for="email">Gaming:</label>
+  <input type="text" formControlName="gaming" />
+  <small *ngIf="gaming.invalid && (gaming.touched || gaming.dirty)">
+    <div *ngIf="gaming.errors?.['required']">Gaming Required</div>
+  </small>
+
+  <label for="password">Extra Activity:</label>
+  <input type="text" formControlName="extra" />
+  <small *ngIf="extra.invalid && (extra.touched || extra.dirty)">
+    <div *ngIf="extra.errors?.['required']">Extra Activity Required</div>
+  </small>
+
+  <button (click)="next()" [disabled]="skillForm.invalid">Next</button>
+</form>

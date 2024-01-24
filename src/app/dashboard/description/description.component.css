@@ -1,0 +1,38 @@
+.description {
+  width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  background-color: rgba(212, 212, 212, 0.7);
+  border-radius: 30px;
+}
+h1 {
+  color: #333;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+button {
+  margin-bottom: 10px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  position: relative;
+  right: 31px;
+  bottom: 23px;
+  width: 94px;
+}
+
+button:hover {
+  background-color: rgb(38, 38, 38);
+}

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { DataService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +10,19 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   logo: string = 'EcommerceApp';
   navBarList: string[] = ['About', 'Home', 'Contact', 'Demo', 'Pages'];
+  username: any;
 
-  constructor() {}
+  constructor(private route: Router, private service: DataService) {
+    this.service.usernameSubject.subscribe((name) => {
+      this.username = name;
+      console.log(name, 'testing name');
+    });
+  }
+
+  isLoggedIn = this.service.isLoggedIn;
+
+  isLoggedOut() {
+    this.service.isLogout();
+    this.route.navigate(['/']);
+  }
 }

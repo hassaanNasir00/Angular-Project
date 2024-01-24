@@ -5,5 +5,9 @@
     <ul *ngFor="let items of navBarList">
       <li>{{ items }}</li>
     </ul>
+    <div class="right-sec" *ngIf="isLoggedIn | async">
+      <p>Welcome, {{ username }}!</p>
+      <button (click)="isLoggedOut()">Logout</button>
+    </div>
   </div>
 </div>

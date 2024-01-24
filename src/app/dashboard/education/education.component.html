@@ -1,0 +1,30 @@
+<form [formGroup]="eduForm">
+  <h2>Education</h2>
+  <label for="firstName">Latest Degree:</label>
+  <input type="text" formControlName="degree" />
+  <small *ngIf="degree.invalid && (degree.touched || degree.dirty)">
+    <div *ngIf="degree.errors?.['required']">Degree Required</div>
+  </small>
+
+  <label for="lastName">Passing Year:</label>
+  <input type="number" formControlName="passingYear" />
+  <small
+    *ngIf="passingYear.invalid && (passingYear.touched || passingYear.dirty)"
+  >
+    <div *ngIf="passingYear.errors?.['required']">Passing Year Required</div>
+  </small>
+
+  <label for="email">CGPA:</label>
+  <input type="number" formControlName="cgpa" />
+  <small *ngIf="cgpa.invalid && (cgpa.touched || cgpa.dirty)">
+    <div *ngIf="cgpa.errors?.['required']">Cgpa Required</div>
+  </small>
+
+  <label for="password">Grade:</label>
+  <input type="text" formControlName="grade" />
+  <small *ngIf="grade.invalid && (grade.touched || grade.dirty)">
+    <div *ngIf="grade.errors?.['required']">Grade Required</div>
+  </small>
+
+  <button (click)="next()" [disabled]="eduForm.invalid">Next</button>
+</form>

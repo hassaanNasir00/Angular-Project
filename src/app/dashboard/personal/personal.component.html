@@ -1,0 +1,36 @@
+<form [formGroup]="personalForm">
+  <h2>Personal</h2>
+  <label for="firstName">First Name:</label>
+  <input type="text" formControlName="fname" />
+  <small *ngIf="fname.invalid && (fname.touched || fname.dirty)">
+    <div *ngIf="fname.errors?.['required']">Passing Year Required</div>
+  </small>
+
+  <label for="lastName">Last Name:</label>
+  <input type="text" formControlName="lname" />
+  <small *ngIf="lname.invalid && (lname.touched || lname.dirty)">
+    <div *ngIf="lname.errors?.['required']">Passing Year Required</div>
+  </small>
+
+  <div *ngIf="cgpaValue">
+    <label for="lastName">Extra</label>
+    <input type="text" formControlName="extra" />
+    <small *ngIf="extra.invalid && (extra.touched || extra.dirty)">
+      <div *ngIf="extra.errors?.['required']">Passing Year Required</div>
+    </small>
+  </div>
+
+  <label for="email">Email:</label>
+  <input type="email" formControlName="email" />
+  <small *ngIf="email.invalid && (email.touched || email.dirty)">
+    <div *ngIf="email.errors?.['required']">Passing Year Required</div>
+  </small>
+
+  <label for="number">Number</label>
+  <input type="number" formControlName="number" />
+  <small *ngIf="number.invalid && (number.touched || number.dirty)">
+    <div *ngIf="number.errors?.['required']">Passing Year Required</div>
+  </small>
+
+  <button (click)="next()" [disabled]="personalForm.invalid">Next</button>
+</form>

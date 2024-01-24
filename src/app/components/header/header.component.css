@@ -25,3 +25,29 @@
 .list ul {
   list-style: none;
 }
+.list {
+  display: flex;
+  align-items: center;
+}
+.list div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.list div p {
+  margin-bottom: 0;
+  color: gray;
+  font-weight: bold;
+}
+
+.right-sec {
+  margin-left: 40px;
+}
+button {
+  background-color: rgb(197, 3, 3);
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 700;
+  color: white;
+}

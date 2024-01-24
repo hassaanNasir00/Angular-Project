@@ -20,6 +20,12 @@ import { RegisterComponent } from './forms/register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddEmpComponent } from './task4/add-emp/add-emp.component';
 import { ShowEmpComponent } from './task4/show-emp/show-emp.component';
+import { DescriptionComponent } from './dashboard/description/description.component';
+import { TabsComponent } from './dashboard/tabs/tabs.component';
+import { EducationComponent } from './dashboard/education/education.component';
+import { PersonalComponent } from './dashboard/personal/personal.component';
+import { SkillsComponent } from './dashboard/skills/skills.component';
+import { CompletedComponent } from './dashboard/completed/completed.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +40,12 @@ import { ShowEmpComponent } from './task4/show-emp/show-emp.component';
     DashboardComponent,
     AddEmpComponent,
     ShowEmpComponent,
+    DescriptionComponent,
+    TabsComponent,
+    EducationComponent,
+    PersonalComponent,
+    SkillsComponent,
+    CompletedComponent,
   ],
   imports: [
     BrowserModule,

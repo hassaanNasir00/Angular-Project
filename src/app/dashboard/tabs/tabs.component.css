@@ -1,0 +1,24 @@
+.tabs {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  background-color: gray;
+  padding: 20px;
+  box-shadow: 0 0 10px black;
+  display: flex;
+  gap: 100px;
+  border-radius: 40px;
+}
+.active-tab {
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+}
+.non-active {
+  font-size: 1px;
+  border: solid 1px white;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+}

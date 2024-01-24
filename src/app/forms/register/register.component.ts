@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 export class RegisterComponent {
   showRegister: boolean = true;
 
-  constructor(private route: Router) {}
+  constructor(private route: Router, private service: DataService) {}
 
   onRegister(name: string, email: any, password: any) {
     sessionStorage.setItem('name', name);
@@ -30,8 +31,8 @@ export class RegisterComponent {
     const storedPassword = sessionStorage.getItem('password');
 
     if (storedEmail == email && storedPassword == password) {
-      alert('Login Successfully');
       this.route.navigate(['/dashboard']);
+      this.service.isLogin();
     }
   }
 }

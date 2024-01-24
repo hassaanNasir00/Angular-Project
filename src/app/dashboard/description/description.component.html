@@ -1,0 +1,15 @@
+<div class="description">
+  <div *ngIf="currentIndex != 3">
+    <button [disabled]="currentIndex === 0" (click)="prev()">Previous</button>
+  </div>
+
+  <div>
+    <h1>
+      {{ title[currentIndex] }}
+    </h1>
+  </div>
+
+  <h3>
+    {{ description[currentIndex] }}
+  </h3>
+</div>

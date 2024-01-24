@@ -1,2 +1,19 @@
-<h1>Dashboard</h1>
-<button (click)="isLogout()">Logout</button>
+<div class="dashboard">
+  <div>
+    <app-description
+      [title]="title"
+      [description]="description"
+      [currentIndex]="currentIndex"
+    ></app-description>
+  </div>
+
+  <div>
+    <div class="tab-form">
+      <app-tabs [currentIndex]="currentIndex"></app-tabs>
+    </div>
+    <app-education *ngIf="currentIndex === 0"></app-education>
+    <app-personal *ngIf="currentIndex === 1"></app-personal>
+    <app-skills *ngIf="currentIndex === 2"></app-skills>
+    <app-completed *ngIf="currentIndex === 3"></app-completed>
+  </div>
+</div>
